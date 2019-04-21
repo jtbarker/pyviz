@@ -8,6 +8,9 @@ data0=pd.read_csv('access.log',header=None, delimiter='\t')
 latency=pd.Series(data0[11])
 date=pd.Series(data0[0])
 
+cleanedlatency = [x for x in latency if str(x) != 'nan']
+cleaneddate = [x for x in date if str(x) != 'nan']
+
 
 
 
@@ -20,6 +23,6 @@ date=pd.Series(data0[0])
 plt.plot(latency,date)
 plt.xlabel('latency')
 plt.ylabel('date')
-plt.title('Interesting Graph\nCheck it out')
+plt.title('Latency distribution\nCheck it out')
 plt.legend()
 plt.show()
