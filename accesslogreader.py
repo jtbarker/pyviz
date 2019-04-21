@@ -23,6 +23,6 @@ cleaneddate = [x for x in date if str(x) != 'nan']
 plt.plot(latency,date)
 plt.xlabel('latency')
 plt.ylabel('date')
-plt.title('Latency distribution\nCheck it out')
+plt.title('Latency distribution\n Useful for logfile analysis')
 plt.legend()
 plt.show()
